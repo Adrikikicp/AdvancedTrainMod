@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.adrikikicp.atm.mixin",
+  "refmap": "atm.refmap.json",
+  "mixins": [
+
+  ],
+  "client": [
+
+  ]
+}
