@@ -32,10 +32,13 @@ compileJava {
 minecraft {
     version = "1.12.2-14.23.5.2768"
     runDir = "run"
-    
-
-    mappings = "snapshot_20170624"
-  
+        mappings = "snapshot_20170624"
+    String resolved_core_plugin = mod_core_plugin.replace('${mod_group}', mod_group).replace('${mod_id}', mod_id)
+    clientJvmArgs += "-Dfml.coreMods.load=${resolved_core_plugin}"
+    serverJvmArgs += "-Dfml.coreMods.load=${resolved_core_plugin}"
+    String resolved_core_config = mod_mixin_configs.replace('${mod_id}', mod_id)
+    clientRunArgs += "--mixin ${resolved_core_config}"
+    serverRunArgs += "--mixin ${resolved_core_config}"
 }
 
 repositories {
@@ -47,6 +50,8 @@ repositories {
         name = 'sponge'
         url = 'https://repo.spongepowered.org/maven/'
     }
+    maven{ url = 'https://jitpack.io'}
+    maven{ url = 'https://teamopenindustry.cc/maven/'}
 }
 
 configurations{
@@ -62,6 +67,9 @@ dependencies {
         exclude module: 'gson'
         exclude module: 'commons-io'
     }
+
+    deobfCompile 'com.github.Fexcraft:FCL:1.12.2-SNAPSHOT'
+    compile 'com.github.TeamOpenIndustry:TrackAPI:forge_1.12.2-SNAPSHOT'
 
 }
 

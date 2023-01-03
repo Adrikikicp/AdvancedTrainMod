@@ -1,6 +1,7 @@
 {
   "required": false,
   "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7.11",
   "package": "com.adrikikicp.atm.mixin",
   "refmap": "atm.refmap.json",
   "mixins": [
