@@ -1,5 +1,6 @@
 package com.adrikikicp.atm.core;
 
+import com.adrikikicp.atm.proxy.CommonProxy;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import org.spongepowered.asm.launch.MixinBootstrap;
 
@@ -12,6 +13,7 @@ public class CoreMod implements IFMLLoadingPlugin {
 
     public CoreMod() {
         MixinBootstrap.init();
+        new CommonProxy().create();
     }
 
     @Override

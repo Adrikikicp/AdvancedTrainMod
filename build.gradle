@@ -68,8 +68,7 @@ dependencies {
         exclude module: 'commons-io'
     }
 
-    deobfCompile 'com.github.Fexcraft:FCL:1.12.2-SNAPSHOT'
-    compile 'com.github.TeamOpenIndustry:TrackAPI:forge_1.12.2-SNAPSHOT'
+
 
 }
 
