@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.message.MessageFactory;
 import scala.swing.Dialog;
 
-import javax.xml.soap.SOAPException;
+
 
 public class CommonProxy  {
 
